@@ -17,8 +17,11 @@ do
 
                 let sleepinterval="($i*2)"
                 sleep $sleepinterval
+                #get seed from file
+                SEED=`sed -n "$i"'p' seeds.txt`
                 #Run the command
-                /usr/bin/time -o ${path}/$timeFile -a x3cflux-bma -i $modelDir$file -o ${path}/exec/${nameVar}eval.hdf5  -p 50 -n 5000000 -b 25000$
+                /usr/bin/time -o ${path}/$timeFile -a x3cflux-bma -i $modelDir$file -o ${path}/exec/${nameVar}eval.hdf5  -p 50 -n 5000000 -b 25000 -s ${SEED}$
+                echo "$SEED"
                 )&
         if (( $i % 5 == 0 )); then wait; fi # Limit to 10 concurrent subshells.
         done
