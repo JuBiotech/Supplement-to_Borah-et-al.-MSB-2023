@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/580439683.svg)](https://zenodo.org/badge/latestdoi/580439683)
 Supplementary information to 
 
 # One-shot <sup>13</sup>C<sup>15</sup>N-metabolic flux analysis for simultaneous quantification of carbon and nitrogen flux
